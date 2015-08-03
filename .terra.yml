@@ -1,0 +1,12 @@
+document_root: web
+
+hooks:
+  build: |
+    composer install
+    chmod 777 app/cache -R
+    chmod 777 app/logs -R
+
+docker_compose:
+  overrides:
+    app:
+      image: terra/symfony
