@@ -1,3 +1,8 @@
 app:
     resource: "@AppBundle/Controller/"
     type:     annotation
+
+JMSJobQueueBundle:
+    resource: "@JMSJobQueueBundle/Controller/"
+    type: annotation
+    prefix: /jobs
