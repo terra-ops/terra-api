@@ -4,8 +4,63 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#composer-lock-the-lock-file",
         "This file is @generated automatically"
     ],
-    "hash": "af6731465ba45a279da5bdd4b0ac9512",
+    "hash": "ed2ae90692e8d0f3ca2c767976702dbf",
     "packages": [
+        {
+            "name": "cpliakas/git-wrapper",
+            "version": "1.5.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/cpliakas/git-wrapper.git",
+                "reference": "0f8c4a4dcdd6ca5b46330ab12be3a439eea16d46"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/cpliakas/git-wrapper/zipball/0f8c4a4dcdd6ca5b46330ab12be3a439eea16d46",
+                "reference": "0f8c4a4dcdd6ca5b46330ab12be3a439eea16d46",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0",
+                "symfony/event-dispatcher": "~2.3|~3.0",
+                "symfony/process": "~2.3|~3.0"
+            },
+            "require-dev": {
+                "pdepend/pdepend": "~1.0",
+                "phploc/phploc": "~2.0",
+                "phpmd/phpmd": "~1.0",
+                "phpunit/phpunit": "~3.0",
+                "psr/log": "~1.0",
+                "scrutinizer/ocular": "~1.0",
+                "sebastian/phpcpd": "~2.0",
+                "symfony/filesystem": "~2.0"
+            },
+            "suggest": {
+                "monolog/monolog": "Enables logging of executed git commands"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "GitWrapper": "src/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Chris Pliakas",
+                    "email": "opensource@chrispliakas.com"
+                }
+            ],
+            "description": "A PHP wrapper around the Git command line utility.",
+            "homepage": "https://github.com/cpliakas/git-wrapper",
+            "keywords": [
+                "git"
+            ],
+            "time": "2015-07-08 14:28:09"
+        },
         {
             "name": "doctrine/annotations",
             "version": "v1.2.6",
@@ -1852,6 +1907,106 @@
             "time": "2015-07-31 13:24:45"
         },
         {
+            "name": "teqneers/php-stream-wrapper-for-git",
+            "version": "1.0.x-dev",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/teqneers/PHP-Stream-Wrapper-for-Git.git",
+                "reference": "ce9791dfb4f5eb49b03c02b3906f7ba0791dbc2a"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/teqneers/PHP-Stream-Wrapper-for-Git/zipball/ce9791dfb4f5eb49b03c02b3906f7ba0791dbc2a",
+                "reference": "ce9791dfb4f5eb49b03c02b3906f7ba0791dbc2a",
+                "shasum": ""
+            },
+            "require": {
+                "php": ">=5.3.0"
+            },
+            "require-dev": {
+                "knplabs/gaufrette": "*",
+                "phpunit/phpunit": "3.7.*"
+            },
+            "suggest": {
+                "knplabs/gaufrette": "to use the Gaufrette adapter"
+            },
+            "type": "library",
+            "autoload": {
+                "psr-0": {
+                    "TQ": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Stefan Gehrig",
+                    "email": "gehrig@teqneers.de",
+                    "homepage": "http://opensource.teqneers.de/"
+                }
+            ],
+            "description": "Git Stream Wrapper for PHP",
+            "homepage": "https://github.com/teqneers/PHP-Stream-Wrapper-for-Git",
+            "keywords": [
+                "git",
+                "stream-wrapper",
+                "streamwrapper"
+            ],
+            "time": "2014-08-01 10:44:45"
+        },
+        {
+            "name": "terra/terra-app",
+            "version": "dev-master",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/terra-ops/terra-app.git",
+                "reference": "ee86be74a8ba3ddf48e404be57eb4f7f32da8863"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/terra-ops/terra-app/zipball/ee86be74a8ba3ddf48e404be57eb4f7f32da8863",
+                "reference": "ee86be74a8ba3ddf48e404be57eb4f7f32da8863",
+                "shasum": ""
+            },
+            "require": {
+                "cpliakas/git-wrapper": "~1.4",
+                "php": ">=5.5.9",
+                "symfony/config": "~2.6",
+                "symfony/console": "~2.6",
+                "symfony/filesystem": "~2.6",
+                "symfony/process": "~2.6",
+                "symfony/yaml": "~2.6",
+                "teqneers/php-stream-wrapper-for-git": "~1.0"
+            },
+            "bin": [
+                "bin/terra"
+            ],
+            "type": "project",
+            "autoload": {
+                "psr-4": {
+                    "terra\\": "src/terra/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "GPL-2.0"
+            ],
+            "authors": [
+                {
+                    "name": "Jon Pugh",
+                    "email": "jon@thinkdrop.net"
+                },
+                {
+                    "name": "Terra Contributors",
+                    "homepage": "https://github.com/terra-ops/terra-app/graphs/contributors"
+                }
+            ],
+            "description": "DevOps for All",
+            "time": "2015-07-31 02:07:40"
+        },
+        {
             "name": "twig/twig",
             "version": "v1.19.0",
             "source": {
@@ -1960,8 +2115,10 @@
         }
     ],
     "aliases": [],
-    "minimum-stability": "stable",
-    "stability-flags": [],
+    "minimum-stability": "dev",
+    "stability-flags": {
+        "terra/terra-app": 20
+    },
     "prefer-stable": false,
     "prefer-lowest": false,
     "platform": {
