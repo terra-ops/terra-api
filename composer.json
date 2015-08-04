@@ -1,5 +1,5 @@
 {
-    "name": "jon/terra-queue",
+    "name": "terra/api",
     "license": "proprietary",
     "type": "project",
     "autoload": {
@@ -23,7 +23,7 @@
         "incenteev/composer-parameter-handler": "~2.0",
         "jms/job-queue-bundle": "^1.2",
         "pagerfanta/pagerfanta": "~1.0",
-        "terra/terra-app": "dev-master"
+        "terra/cli": "dev-master"
     },
     "require-dev": {
         "sensio/generator-bundle": "~2.3"
