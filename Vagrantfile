@@ -10,11 +10,21 @@ Vagrant.configure(2) do |config|
   config.vm.network "private_network", ip: "7.3.22.4"
   config.vm.hostname = "terra"
 
+  config.vm.provider "virtualbox" do |v|
+    v.memory = 1024
+    v.cpus = 2
+  end
+
   # Provision:
   config.vm.provision "shell", path: "https://raw.githubusercontent.com/terra-ops/terra-cli/master/install.sh"
 
 
   config.vm.provision "shell", inline: <<-SHELL
+    # Add user to docker group
+    usermod -aG docker vagrant
+
+    # Generate keygen for user "vagrant"
+    su vagrant -c 'ssh-keygen -t rsa -N \"\" -f ~/.ssh/id_rsa'
 
     # Install RabbitMQ (from https://github.com/albatrossdigital/terra_ui)
     echo "deb http://www.rabbitmq.com/debian/ testing main"  | tee  /etc/apt/sources.list.d/rabbitmq.list > /dev/null
